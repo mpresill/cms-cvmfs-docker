@@ -18,7 +18,7 @@ RUN yum install -y epel-release
 RUN yum repolist 
 RUN yum install -y https://ecsft.cern.ch/dist/cvmfs/cvmfs-release/cvmfs-release-latest.noarch.rpm 
 #RUN yum install -y cern-get-sso-cookie 
-RUN yum install -y emacs nano vim python3 openssh-server cvmfs man freetype libXpm libXext wget git 
+RUN yum install -y emacs nano vim python3 openssh-server cvmfs man freetype libXpm libXext wget git rsync 
 RUN yum install -y       tcsh zsh tcl  perl-ExtUtils-Embed perl-libwww-perl  libXmu  libXpm  zip e2fsprogs 
 RUN yum install -y       krb5-devel krb5-workstation strace libXft ImageMagick ImageMagick-devel mesa-libGL mesa-libGL-devel 
 RUN yum install -y       mesa-libGLU mesa-libGLU-devel glx-utils libXrender-devel libXtst-devel xorg-x11-server-Xorg xorg-x11-xauth 
