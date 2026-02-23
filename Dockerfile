@@ -1,5 +1,5 @@
 FROM cern/alma9-base
-MAINTAINER Alexx Perloff "Alexx.Perloff@Colorado.edu"
+MAINTAINER Matteo Presilla "matteo.presilla@cern.ch"
 
 ADD cvmfs/cern.repo /etc/yum.repos.d/cern.repo
 ADD cvmfs/cernvm.repo /etc/yum.repos.d/cernvm.repo
