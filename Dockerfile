@@ -48,6 +48,7 @@ RUN wget --no-check-certificate --content-disposition -O /usr/local/novnc-noVNC-
     && git clone https://github.com/novnc/websockify /usr/local/novnc/utils/websockify
 
 WORKDIR /home/cmsusr
+ADD utils utils
 ADD cvmfs/append_to_bashrc.sh .append_to_bashrc.sh
 RUN cat .append_to_bashrc.sh >> .bashrc \
     && rm .append_to_bashrc.sh \
