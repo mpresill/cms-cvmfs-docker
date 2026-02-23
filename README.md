@@ -226,3 +226,20 @@ http://cmsrep.cern.ch/cmssw/cms/slc6_amd64_gcc530-driver.txt
 https://github.com/Dr15Jones/cms-cvmfs-docker
 
 Special thanks goes to Burt Holzman for figuring out how to map the UID/GID and allowing for X11 access without breaking the Fermilab computing policy.
+
+--------------------------------------------
+# Example for KSETA 2026 school (from `KSETA2026` branch)
+
+Building the images from the fork https://github.com/mpresill/cms-cvmfs-docker :
+    ```bash
+   git clone git@github.com:mpresill/cms-cvmfs-docker.git
+   cd cms-cvmfs-docker
+   docker build --no-cache --platform linux/x86_64 -t cms-cvmfs-docker:latest .
+    ```
+Running the image:   
+    ```bash
+   docker run --rm -it   --device /dev/fuse --cap-add SYS_ADMIN   -e CVMFS_MOUNTS="cms.cern.ch sft.cern.ch"   cms-cvmfs-docker:latest
+
+    ```
+Checked that `ls /cvmfs/cms.cern.ch/` and `scram list` work within the docker.
+
